@@ -5,3 +5,5 @@ Q | Info
 Softer soft parses|configuring the session shared SQL area can sometimes reduce the amount of latching in the soft parses, making them "softer."
 inevitable HARD parses|The database always perform a hard parse of DDL
 recursive SQL | would issue a COMMIT before executing
+adaptive plan| changes plan in runtime
+adaptive reoptimization|changes plan after the initian execution
