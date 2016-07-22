@@ -8,3 +8,4 @@ recursive SQL | would issue a COMMIT before executing
 adaptive plan| changes plan in runtime
 adaptive reoptimization|changes plan after the initian execution
 Reoptimization|Statistics feedback, Performance feedback (PARALLEL_DEGREE_POLICY =  ADAPTIVE)
+Populate inmemory store for a table|ALTER TABLE mysales INMEMORY;
