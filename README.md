@@ -10,5 +10,5 @@ adaptive reoptimization|changes plan after the initian execution
 Reoptimization|Statistics feedback, Performance feedback (PARALLEL_DEGREE_POLICY =  ADAPTIVE)
 Populate inmemory store for a table| ALTER TABLE mysales INMEMORY;
 SQL baselines|``` plan_name,sql_handle,sql_text,enabled, accepted
- |FROM   dba_sql_plan_baselines
- |WHERE  sql_text LIKE '%SPM%';```
+ FROM   dba_sql_plan_baselines
+ WHERE  sql_text LIKE '%SPM%';```
