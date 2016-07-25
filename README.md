@@ -30,3 +30,5 @@ adaptive plan| The STATISTICS_LEVEL initialization parameter is set to ALL.<br>q
 PQ_DISTRIBUTE|explicitly forces a partial partition-wise join
 UNIQUE key|index does not contain ROWIDs in leaf blocks
 NULLs in B-tree indexes| Single column indexes never store NULLs.
+ndex Skip Scan|The number of distinct values in the leading columns of the index determines the number of logical subindexes
+Bitmap index|The database stores a bitmap index in a B-tree structure with corresponding rowid range and bitmap.
