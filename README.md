@@ -46,3 +46,4 @@ A popular value |occurs as an endpoint value of multiple buckets.
 Create histograms|BEGIN<br>  DBMS_STATS.GATHER_TABLE_STATS ( <br>    ownname    => 'SH'<br>,   tabname    => 'COUNTRIES'<br>,  <br>method_opt => 'FOR COLUMNS COUNTRY_SUBREGION_ID'<br>);<br>END;
 Check histogram information|SELECT TABLE_NAME, COLUMN_NAME, NUM_DISTINCT, HISTOGRAM<br>FROM   USER_TAB_COL_STATISTICS<br>WHERE <br>TABLE_NAME='COUNTRIES'<br>AND    COLUMN_NAME='COUNTRY_SUBREGION_ID';
 Check endpoint number and endpoint value|SELECT ENDPOINT_NUMBER, ENDPOINT_VALUE<br>FROM   USER_HISTOGRAMS<br>WHERE  TABLE_NAME='COUNTRIES'<br>AND   <br>COLUMN_NAME='COUNTRY_SUBREGION_ID';
+Create top-frequency historgams|BEGIN<br>  DBMS_STATS.GATHER_TABLE_STATS (<br>    ownname    => 'SH'<br>,   tabname    => 'COUNTRIES'<br>,  <br>method_opt => 'FOR COLUMNS COUNTRY_SUBREGION_ID **SIZE 7**'<br>);<br>END;
