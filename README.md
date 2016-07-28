@@ -42,4 +42,7 @@ Bulk load stats HINTS|By default, the database gathers statistics during bulk lo
 SQL Plan Directives example|SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY_CURSOR(FORMAT=>'**ALLSTATS LAST**'));<br>Check V$SQL.IS_REOPTIMIZABLE value<br>Monitor directives using the views DBA_SQL_PLAN_DIRECTIVES and DBA_SQL_PLAN_DIR_OBJECTS<br>EXEC DBMS_SPD.FLUSH_SQL_PLAN_DIRECTIVE;
 Dynamic Stats|ALTER SESSION SET OPTIMIZER_DYNAMIC_SAMPLING =11;
 Automatic Histograms|If you gather statistics for a table and do not query the table, then the database does not create histograms for columns in this table. For the database to create the histograms automatically, you must run one or more queries to populate the column usage information in SYS.COL_USAGE$.<br>run DBMS_STATS for a table with the METHOD_OPT parameter set to the default SIZE AUTO.<br> Use USER_TAB_COL_STATISTICS to check if Hms exist.<br>before and after selects: EXEC DBMS_STATS.GATHER_TABLE_STATS(USER,'SALES2',OPTIONS=>'GATHER AUTO');
-A popular value |occurs as an endpoint value of multiple buckets. 
+A popular value |occurs as an endpoint value of multiple buckets.
+Create histograms|BEGIN<br>  DBMS_STATS.GATHER_TABLE_STATS ( <br>    ownname    => 'SH'<br>,   tabname    => 'COUNTRIES'<br>,  <br>method_opt => 'FOR COLUMNS COUNTRY_SUBREGION_ID'<br>);<br>END;
+Check histogram information|SELECT TABLE_NAME, COLUMN_NAME, NUM_DISTINCT, HISTOGRAM<br>FROM   USER_TAB_COL_STATISTICS<br>WHERE <br>TABLE_NAME='COUNTRIES'<br>AND    COLUMN_NAME='COUNTRY_SUBREGION_ID';
+Check endpoint number and endpoint value|SELECT ENDPOINT_NUMBER, ENDPOINT_VALUE<br>FROM   USER_HISTOGRAMS<br>WHERE  TABLE_NAME='COUNTRIES'<br>AND   <br>COLUMN_NAME='COUNTRY_SUBREGION_ID';
