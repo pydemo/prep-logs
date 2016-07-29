@@ -48,3 +48,8 @@ Check histogram information|SELECT TABLE_NAME, COLUMN_NAME, NUM_DISTINCT, HISTOG
 Check endpoint number and endpoint value|SELECT ENDPOINT_NUMBER, ENDPOINT_VALUE<br>FROM   USER_HISTOGRAMS<br>WHERE  TABLE_NAME='COUNTRIES'<br>AND   <br>COLUMN_NAME='COUNTRY_SUBREGION_ID';
 Create top-frequency historgams|BEGIN<br>  DBMS_STATS.GATHER_TABLE_STATS (<br>    ownname    => 'SH'<br>,   tabname    => 'COUNTRIES'<br>,  <br>method_opt => 'FOR COLUMNS COUNTRY_SUBREGION_ID **SIZE 7**'<br>);<br>END;
 synopsis| is a sample of distinct values<br>DB is merging partition-level synopises to come up with global NDV
+Incremental Statistics Maintenance|Use DBMS_STATS.SET_TABLE_PREFS to set the INCREMENTAL value<br>AUTO_SAMPLE_SIZE for ESTIMATE_PERCENT and AUTO for GRANULARITY <br>atabase gathers global index statistics by performing a full index scan
+starts for exchange partition|DBMS_STATS can create a synopsis on a nonpartitioned table. The synopsis enables the database to maintain incremental statistics as part of a partition exchange operation without having to explicitly gather statistics on the partition after the exchange
+Dynamic sampling|ALTER SESSION SET OPTIMIZER_DYNAMIC_SAMPLING=4;
+pending statistics |save the statistics and not publish them immediately after the collection.
+Gather stats on column group |BEGIN<br>  DBMS_STATS.GATHER_TABLE_STATS( 'sh','customers',<br>METHOD_OPT => 'FOR ALL COLUMNS SIZE<br>SKEWONLY ' ||<br>'FOR COLUMNS SIZE SKEWONLY (cust_state_province,country_id)' );<br>END;<br>/
