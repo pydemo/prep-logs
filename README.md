@@ -56,3 +56,8 @@ Gather stats on column group |BEGIN<br>  DBMS_STATS.GATHER_TABLE_STATS( 'sh','cu
 Show extended col stats|SELECT EXTENSION_NAME, EXTENSION<br>FROM   USER_STAT_EXTENSIONS<br>WHERE  TABLE_NAME='CUSTOMERS';<br><br>SELECT e.EXTENSION col_group, t.NUM_DISTINCT, t.HISTOGRAM<br>FROM   USER_STAT_EXTENSIONS e,<br>USER_TAB_COL_STATISTICS t<br>WHERE  e.EXTENSION_NAME=t.COLUMN_NAME<br>AND    e.TABLE_NAME=t.TABLE_NAME<br>AND   <br>t.TABLE_NAME='CUSTOMERS';<br><br><br>DBMS_STATS.DROP_EXTENDED_STATS
 Expression stats|BEGIN<br>  DBMS_STATS.GATHER_TABLE_STATS( <br>    'sh'<br>,   'customers'<br>,   method_opt => 'FOR ALL COLUMNS SIZE<br>SKEWONLY FOR COLUMNS<br>                  (LOWER(cust_state_province)) SIZE SKEWONLY' <br>);<br>END;
 SQL Plan directives|If the directives are not used in 53 weeks, then the database automatically purges them.
+Purge stats|EXEC DBMS_STATS.PURGE_STATS( SYSDATE-7 );
+Export stats|DBMS_STATS.EXPORT_SCHEMA_STATS<br>BEGIN<br>  DBMS_STATS.CREATE_STAT_TABLE ( <br>    ownname => 'dba1'<br>,   stattab => 'opt_stats'<br>);<br>END;<br>/<br><br>DBMS_STATS.IMPORT_SCHEMA_STATS
+OPTIMIZER_INMEMORY_AWARE|enables (TRUE) or disables (FALSE) all of the in-memory optimizer features, including the cost model for in-memory, table expansion, bloom filters
+RESULT_CACHE_MODE|Controls whether the database uses the SQL query result cache for all queries, or only for the queries that are annotated with the result cache hint
+Enabling optimizer features|SHOW PARAMETER optimizer_features_enable<br>ALTER SYSTEM SET OPTIMIZER_FEATURES_ENABLE='10.2.0.5';
