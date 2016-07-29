@@ -53,3 +53,4 @@ starts for exchange partition|DBMS_STATS can create a synopsis on a nonpartition
 Dynamic sampling|ALTER SESSION SET OPTIMIZER_DYNAMIC_SAMPLING=4;
 pending statistics |save the statistics and not publish them immediately after the collection.
 Gather stats on column group |BEGIN<br>  DBMS_STATS.GATHER_TABLE_STATS( 'sh','customers',<br>METHOD_OPT => 'FOR ALL COLUMNS SIZE SKEWONLY  FOR COLUMNS SIZE SKEWONLY (cust_state_province,country_id)' );<br>END;<br>/
+Show extended col stats|SELECT EXTENSION_NAME, EXTENSION<br>FROM   USER_STAT_EXTENSIONS<br>WHERE  TABLE_NAME='CUSTOMERS';<br><br>SELECT e.EXTENSION col_group, t.NUM_DISTINCT, t.HISTOGRAM<br>FROM   USER_STAT_EXTENSIONS e,<br>USER_TAB_COL_STATISTICS t<br>WHERE  e.EXTENSION_NAME=t.COLUMN_NAME<br>AND    e.TABLE_NAME=t.TABLE_NAME<br>AND   <br>t.TABLE_NAME='CUSTOMERS';<br><br><br>DBMS_STATS.DROP_EXTENDED_STATS
