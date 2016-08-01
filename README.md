@@ -61,3 +61,5 @@ Export stats|DBMS_STATS.EXPORT_SCHEMA_STATS<br>BEGIN<br>  DBMS_STATS.CREATE_STAT
 OPTIMIZER_INMEMORY_AWARE|enables (TRUE) or disables (FALSE) all of the in-memory optimizer features, including the cost model for in-memory, table expansion, bloom filters
 RESULT_CACHE_MODE|Controls whether the database uses the SQL query result cache for all queries, or only for the queries that are annotated with the result cache hint
 Enabling optimizer features|SHOW PARAMETER optimizer_features_enable<br>ALTER SYSTEM SET OPTIMIZER_FEATURES_ENABLE='10.2.0.5';
+B-tree Cluster Index|Instead of pointing to a row it points to a block
+SQL Tuning Advisor| is run during system maintenance windows as an automated maintenance task. 
