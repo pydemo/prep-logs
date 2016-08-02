@@ -63,3 +63,8 @@ RESULT_CACHE_MODE|Controls whether the database uses the SQL query result cache 
 Enabling optimizer features|SHOW PARAMETER optimizer_features_enable<br>ALTER SYSTEM SET OPTIMIZER_FEATURES_ENABLE='10.2.0.5';
 B-tree Cluster Index|Instead of pointing to a row it points to a block
 SQL Tuning Advisor| is run during system maintenance windows as an automated maintenance task. 
+V$SQL| describes the statements that currently reside in the library cache. It contains one row for every child cursor
+Show location of trace file|SELECT value FROM   v$diag_info WHERE  name = 'Default Trace File';
+CURSOR_SHARING|initialization parameter to FORCE does not reduce the parse count.<br>FORCE enables the database to perform a soft parse instead of a hard parse
+Adaptive cursor sharing|does not apply to statements that contain only literals.
+bind-sensitive cursor|cursor whose optimal plan may depend on the value of a bind variable
