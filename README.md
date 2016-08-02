@@ -65,6 +65,10 @@ B-tree Cluster Index|Instead of pointing to a row it points to a block
 SQL Tuning Advisor| is run during system maintenance windows as an automated maintenance task. 
 V$SQL| describes the statements that currently reside in the library cache. It contains one row for every child cursor
 Show location of trace file|SELECT value FROM   v$diag_info WHERE  name = 'Default Trace File';
-CURSOR_SHARING|initialization parameter to FORCE does not reduce the parse count.<br>FORCE enables the database to perform a soft parse instead of a hard parse
-Adaptive cursor sharing|does not apply to statements that contain only literals.
-bind-sensitive cursor|cursor whose optimal plan may depend on the value of a bind variable
+CURSOR_SHARING|initialization parameter to FORCE does not reduce the parse count.<br>FORCE enables the database to perform a soft<br>parse instead of a hard parse<br>Adaptive cursor sharing|does not apply to statements that contain only literals.<br>bind-sensitive cursor|cursor whose optimal plan may depend on the value of a bind variable<br>V$SQL shows whether a<br>cursor is bind-sensitive or bind-aware.
+
+V$SQL_CS_HISTOGRAM| shows the distribution of the execution count across a three-bucket execution history histogram.
+
+V$SQL_CS_SELECTIVITY| shows the selectivity ranges stored for every predicate containing a bind variable if the selectivity was used to check cursor sharing. It contains the text of the predicates, and the low and high values for the selectivity ranges.
+
+V$SQL_CS_STATISTICS| summarizes the information that the optimizer uses to determine whether to mark a cursor bind-aware. For a sample of executions, the database tracks the rows processed, buffer gets, and CPU time. The PEEKED column shows YES when the bind set was used to build the cursor; otherwise, the value is NO.
