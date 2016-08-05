@@ -1,6 +1,8 @@
 # Oracle prep-logs
 Q | Info 
 --- | --- 
+constraint in the enabled novalidated state| Only new data is checked, not existing - this way table is not locked upon validation.
+ALTER INDEX . . . REBUILD|uses the fast full scan feature. It reads all the index blocks using multiblock I/O, then discards the branch blocks.
 **Soft parses are better**|database skips the optimization and row source generation steps, proceeding straight to execution.
 Softer soft parses|configuring the session shared SQL area can sometimes reduce the amount of latching in the soft parses, making them "softer."
 inevitable HARD parses|The database always perform a hard parse of DDL
