@@ -1,6 +1,8 @@
 # Oracle prep-logs
 Q | Info 
 --- | --- 
+INDEXES|In general, every index on a table slows INSERTs into the table by a factor of 3.<br>Two indexes generally make the INSERT twice as slow<br>Whenever the NOT EQUAL operators are used in the WHERE clause, indexes on the columns being referenced cannot be used.
+Result Cache| does not work when you are logged in as sysdba
 constraint in the enabled novalidated state| Only new data is checked, not existing - this way table is not locked upon validation.
 ALTER INDEX . . . REBUILD|uses the fast full scan feature. It reads all the index blocks using multiblock I/O, then discards the branch blocks.
 **Soft parses are better**|database skips the optimization and row source generation steps, proceeding straight to execution.
