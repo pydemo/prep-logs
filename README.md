@@ -1,7 +1,10 @@
 # Oracle prep-logs
 Q | Info 
 --- | --- 
-INDEXES|In general, every index on a table slows INSERTs into the table by a factor of 3.<br>Two indexes generally make the INSERT twice as slow<br>Whenever the NOT EQUAL operators are used in the WHERE clause, indexes on the columns being referenced cannot be used.
+Bitmap indexes| do not contain any of the data from the column and cannot be used for any type of integrity checking.<br>Bitmap indexes cannot be declared as unique.<br>have a maximum length of 30 columns.<br>Bitmap indexes are stored as compressed indexed values, which can contain a range of ROWIDs. Therefore, Oracle has to lock the entire range of the ROWIDs for a given value. This type of locking has the potential to cause deadlock situations with certain types of DML statements
+90-10 split|If new value is greater than any values already in the index, then data in block is split 90-10.
+50-50 split|If new value  is not the maximum indexed value, then it's a 50-50 split (2 extra blocks a recreated).
+INDEXES|In general, every index on a table slows INSERTs into the table by a factor of 3.<br>Two indexes generally make the INSERT twice as slow<br>Whenever the NOT EQUAL operators are used in the WHERE clause, indexes on the columns being referenced cannot be used.<br>No true update performed within an index. (DELETE-marked for delete, INSERT)<br>Index enries are cleaned out by delayed block cleanout. Cleanout happens during subsequent select.<br>UPDATE operations, along with DELETES/INSERTS within the same transaction, tend to increase the size of an index greatly
 Result Cache| does not work when you are logged in as sysdba
 constraint in the enabled novalidated state| Only new data is checked, not existing - this way table is not locked upon validation.
 ALTER INDEX . . . REBUILD|uses the fast full scan feature. It reads all the index blocks using multiblock I/O, then discards the branch blocks.
