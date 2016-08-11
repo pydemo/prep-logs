@@ -1,6 +1,7 @@
 # Oracle prep-logs
 Q | Info 
 --- | --- 
+MERGE| requests index values (not table values) as the primary data source
  ALL_ROWS| Gets all rows faster (generally forces index suppression)
  FIRST_ROWS| Gets the first row faster (generally forces index use).
 The cost-based optimizer| now has two modes of operation: normal mode and tuning mode.<br> Normal mode should be used in production and test environments; <br>tuning mode can be used in development environments to aid developers and DBAs in testing specific SQL code.
