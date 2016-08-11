@@ -1,6 +1,9 @@
 # Oracle prep-logs
 Q | Info 
 --- | --- 
+ ALL_ROWS| Gets all rows faster (generally forces index suppression)
+ FIRST_ROWS| Gets the first row faster (generally forces index use).
+The cost-based optimizer| now has two modes of operation: normal mode and tuning mode.<br> Normal mode should be used in production and test environments; <br>tuning mode can be used in development environments to aid developers and DBAs in testing specific SQL code.
 System partitions|Cannot be used in IOTs<br>Cannot be composite<br>Cannot split<br>Cannot be used with CTAS<br>Cannot be used with INSERT AS SELECT<br>CREATE TABLE …PARTITION BY SYSTEM PARTITIONS n (where n is 1 to 1024K–1)
 Partitioning restrictions| You can specify NULL in list partitions.<br> You cannot list partition IOT.<br>The string of list values cannot be longer that 4k<br>The total number of part<64k-1
 Interval part-ng|interval can be only NUMBER and DATE<br>cannot be IOT<br>no support for domain indexes
