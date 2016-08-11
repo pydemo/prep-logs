@@ -1,6 +1,7 @@
 # Oracle prep-logs
 Q | Info 
 --- | --- 
+System partitions|Cannot be used in IOTs<br>Cannot be composite<br>Cannot split<br>Cannot be used with CTAS<br>Cannot be used with INSERT AS SELECT<br>CREATE TABLE …PARTITION BY SYSTEM PARTITIONS n (where n is 1 to 1024K–1)
 Partitioning restrictions| You can specify NULL in list partitions.<br> You cannot list partition IOT.<br>The string of list values cannot be longer that 4k<br>The total number of part<64k-1
 Interval part-ng|interval can be only NUMBER and DATE<br>cannot be IOT<br>no support for domain indexes
 Bitmap indexes| do not contain any of the data from the column and cannot be used for any type of integrity checking.<br>Bitmap indexes cannot be declared as unique.<br>have a maximum length of 30 columns.<br>Bitmap indexes are stored as compressed indexed values, which can contain a range of ROWIDs. Therefore, Oracle has to lock the entire range of the ROWIDs for a given value. This type of locking has the potential to cause deadlock situations with certain types of DML statements
