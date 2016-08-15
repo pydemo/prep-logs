@@ -1,6 +1,9 @@
 # Oracle prep-logs
 Q | Info 
 --- | --- 
+NO_NATIVE_FULL_OUTER_JOIN|full outer join is executed as a union of left outer join and an antijoin
+CURSOR_SHARING_EXACT|To override CURSOR_SHARING=FORCE
+FULL, CACHE|caches entire table into memory and put it to MRU
 MERGE| requests index values (not table values) as the primary data source
  ALL_ROWS| Gets all rows faster (generally forces index suppression)
  FIRST_ROWS| Gets the first row faster (generally forces index use).
