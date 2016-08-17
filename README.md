@@ -1,6 +1,11 @@
 # Oracle prep-logs
 Q | Info 
---- | --- 
+--- | ---
+Forcing a USE_MERGE hint|always causes the first table to be accessed first in my testing regardless of the order in the FROM clause.
+HASH join|When using an ORDERED hint, the first table in the FROM clause is the table used to build the hash table
+CLUSTER join| is really just a special case of the NESTED LOOPS join<br>two row sources will actually be located in the same physical data block<br>you cannot have a CLUSTER join without a cluster
+SORT-MERGE join| can be effective when both of the row sources are quite large (greater than 5 percent of the blocks accessed).<br>used only for equijoins
+5 primary join methods|nested loops join, the sort-merge join, and the cluster join,hash join, index join
 SPA(SQL Performance Analyser)| compares performance berore and after db change
 OPTIMIZER_USE_INVISIBLE_INDEXES| can be set to TRUE
 Memory taken by sql|select a.buffer_gets,a.buffer_gets/decode(a.executions,0,1,a.executions) ratio,a.executions, b.username,<br>a.sql_text from v$sqlarea a, all_users b<br>where a.parsing_user_id=b.user_id and a.executions>1 and buffer_gets>100000<br>order by 2 desc,1 desc;
