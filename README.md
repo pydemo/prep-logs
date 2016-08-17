@@ -1,6 +1,8 @@
 # Oracle prep-logs
 Q | Info 
 --- | --- 
+SPA(SQL Performance Analyser)| compares performance berore and after db change
+OPTIMIZER_USE_INVISIBLE_INDEXES| can be set to TRUE
 Memory taken by sql|select a.buffer_gets,a.buffer_gets/decode(a.executions,0,1,a.executions) ratio,a.executions, b.username,<br>a.sql_text from v$sqlarea a, all_users b<br>where a.parsing_user_id=b.user_id and a.executions>1 and buffer_gets>100000<br>order by 2 desc,1 desc;
 Lower watermark in a table|ALTER TABLE zz_fix_rejects_staging MOVE TABLESPACE STGDATA01;
 V$SQLAREA|select a.disk_reads,a.disk_reads/decode(a.executions,0,1,a.executions) ratio,a.executions, b.username, a.sql_text <br>from v$sqlarea a, all_users b<br>where a.parsing_user_id=b.user_id and a.executions>1 and disk_reads>100000<br>order by 2 desc,1 desc;
