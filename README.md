@@ -1,6 +1,7 @@
 # Oracle prep-logs
 Q | Info 
 --- | ---
+Change rollback segment| set transaction use rollback segment rbs_big;
 identify objects needed to be pinned|select name, sharable_mem<br>from  v$db_object_cache<br>where sharable_mem>100000<br>and  type in ('PACKAGE','PACKAGE BODY','FUNCTION','PROCEDURE')<br>and kept='NO'
 Compile time warnings|alter session set plsql_warnings='ENABLE:ALL';<br>alter session set plsql_optimize_level=3;<br>alter session set plsql_code_type=native;<br>execute sys.dbms_shared_pool.keep('SYS.STANDARD');
 Forcing a USE_MERGE hint|always causes the first table to be accessed first in my testing regardless of the order in the FROM clause.
