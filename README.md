@@ -1,6 +1,8 @@
 # Oracle prep-logs
 Q | Info 
 --- | ---
+identify objects needed to be pinned|select name, sharable_mem<br>from  v$db_object_cache<br>where sharable_mem>100000<br>and  type in ('PACKAGE','PACKAGE BODY','FUNCTION','PROCEDURE')<br>and kept='NO'
+Compile time warnings|alter session set plsql_warnings='ENABLE:ALL';<br>alter session set plsql_optimize_level=3;<br>alter session set plsql_code_type=native;<br>execute sys.dbms_shared_pool.keep('SYS.STANDARD');
 Forcing a USE_MERGE hint|always causes the first table to be accessed first in my testing regardless of the order in the FROM clause.
 HASH join|When using an ORDERED hint, the first table in the FROM clause is the table used to build the hash table
 CLUSTER join| is really just a special case of the NESTED LOOPS join<br>two row sources will actually be located in the same physical data block<br>you cannot have a CLUSTER join without a cluster
