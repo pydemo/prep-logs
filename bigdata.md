@@ -11,3 +11,7 @@ The HBase regions |are equivalent to range partitions as used in database shardi
   |Splitting and serving regions can be thought of as **autosharding**
  |system is integrated with the MapReduce framework by supplying wrappers that convert tables into input source and output targets for MapReduce jobs
   |There is also the option to run client-supplied code in the address space of the server. The server-side framework to support this is called **coprocessors**. The code has access to the server local data and can be used to implement lightweight batch jobs, or use expressions to analyze or summarize data based on a variety of operators.
+HFiles| are persistent and ordered immutable maps from keys to values. Internally, the files are sequences of blocks with a block index stored at the end. The index is loaded and kept in memory when the HFile is opened. The default block size is 64 KB but can be configured differently if required. The store files internally provide an API to access specific values as well as to scan ranges of values given a start and end key.
+delete marker| (also known as a tombstone marker) is written to indicate the fact that the given key has been deleted
+LSM-trees |are storing data in multipage blocks that are arranged in a B-tree-like structure on disk
+three major components to HBase:| the client library, at least one master server, and many region servers. 
