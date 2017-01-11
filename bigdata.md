@@ -18,3 +18,4 @@ three major components to HBase:| the client library, at least one master server
 **HBase**| is a distributed, persistent, strictly consistent storage system with near-optimal write—in terms of I/O channel saturation—and excellent read performance, and it makes efficient use of disk space by supporting pluggable compression algorithms that can be selected based on the nature of the data in specific column families.
  |it provides push-down predicates, that is, filters, reducing data transferred over the network.
  RPC layer|One of them was Google, which implemented the already mentioned Protocol Buffers. Since the implementation was initially not published, Facebook developed its own version, named **Thrift**.
+Hadoop |consists of two major components at heart: the file system (HDFS) and the processing framework (YARN).
