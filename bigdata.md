@@ -16,3 +16,5 @@ delete marker| (also known as a tombstone marker) is written to indicate the fac
 LSM-trees |are storing data in multipage blocks that are arranged in a B-tree-like structure on disk
 three major components to HBase:| the client library, at least one master server, and many region servers. 
 **HBase**| is a distributed, persistent, strictly consistent storage system with near-optimal write—in terms of I/O channel saturation—and excellent read performance, and it makes efficient use of disk space by supporting pluggable compression algorithms that can be selected based on the nature of the data in specific column families.
+ |it provides push-down predicates, that is, filters, reducing data transferred over the network.
+ RPC layer|One of them was Google, which implemented the already mentioned Protocol Buffers. Since the implementation was initially not published, Facebook developed its own version, named **Thrift**.
