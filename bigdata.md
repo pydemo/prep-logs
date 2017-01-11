@@ -9,3 +9,5 @@ HBase |is implementing the Bigtable storage architecture very faithfully so that
 The HBase regions |are equivalent to range partitions as used in database sharding.
  |Initially there is only one region for a table, and as you start adding data to it, the system is monitoring it to ensure that you do not exceed a configured maximum size. If you exceed the limit, the region is split into two at the middle key--the row key in the middle of the region—creating two roughly equal halves
   |Splitting and serving regions can be thought of as **autosharding**
+ |system is integrated with the MapReduce framework by supplying wrappers that convert tables into input source and output targets for MapReduce jobs
+  |There is also the option to run client-supplied code in the address space of the server. The server-side framework to support this is called **coprocessors**. The code has access to the server local data and can be used to implement lightweight batch jobs, or use expressions to analyze or summarize data based on a variety of operators.
