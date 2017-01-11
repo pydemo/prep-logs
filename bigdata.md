@@ -8,4 +8,4 @@ Drawback of GFS design|it was good with a few very, very large files, but not as
 HBase |is implementing the Bigtable storage architecture very faithfully so that we can explain everything using HBase. 
 The HBase regions |are equivalent to range partitions as used in database sharding.
  |Initially there is only one region for a table, and as you start adding data to it, the system is monitoring it to ensure that you do not exceed a configured maximum size. If you exceed the limit, the region is split into two at the middle key--the row key in the middle of the region—creating two roughly equal halves
-  |Splitting and serving regions can be thought of as *autosharding*
+  |Splitting and serving regions can be thought of as **autosharding**
