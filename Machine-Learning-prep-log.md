@@ -8,5 +8,5 @@ Books| [Hands-On+Machine+Learning+with+Scikit-Learn+and+TensorFlow](https://www.
  |[Thoughtful Machine Learning with Python](https://www.safaribooksonline.com/library/view/thoughtful-machine-learning/9781491924129/)
   | [Introduction to Machine Learning with Python] (https://www.safaribooksonline.com/library/view/introduction-to-machine/9781449369880/)
  |[real-world-machine-learning](https://www.safaribooksonline.com/library/view/real-world-machine-learning/9781617291920/)
- |“Data Science from Scratch”, by J. Grus.| This book presents the fundamentals of Machine Learning, and implements some of the main algorithms in pure python (from scratch, as the name suggests).
+“Data Science from Scratch”, by J. Grus.| This book presents the fundamentals of Machine Learning, and implements some of the main algorithms in pure python (from scratch, as the name suggests).
   “Machine Learning, an algorithmic perspective”, by S. Marsland.| A great introduction to Machine Learning, covering a wide range of topics in depth, with code examples in python (also from scratch, but using NumPy).
