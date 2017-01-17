@@ -10,3 +10,6 @@ Books| [Hands-On+Machine+Learning+with+Scikit-Learn+and+TensorFlow](https://www.
  |[real-world-machine-learning](https://www.safaribooksonline.com/library/view/real-world-machine-learning/9781617291920/)
 “Data Science from Scratch”, by J. Grus.| This book presents the fundamentals of Machine Learning, and implements some of the main algorithms in pure python (from scratch, as the name suggests).
   “Machine Learning, an algorithmic perspective”, by S. Marsland.| A great introduction to Machine Learning, covering a wide range of topics in depth, with code examples in python (also from scratch, but using NumPy).
+“Python Machine Learning”, by S. Raschka.| Also a great introduction to Machine Learning, leveraging python open source libraries (Pylearn 2 and Theano).
+“Learning From Data”, by Y. Abu-Mostafa,
+M. Magdon-Ismail, and H. Lin.| A rather theoretical approach to ML, providing deep insights, in particular on the Bias/Variance tradeoff
