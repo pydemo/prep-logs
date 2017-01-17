@@ -5,4 +5,5 @@ Q | Info
 TensorFlow | Is library for distributed numerical computation using data flow graphs. It makes it possible to train and run very large neural networks efficiently by distributing the computations across potentially thousands of multi-GPU servers. TensorFlow was created at Google and it supports many of their large scale Machine Learning applications. It was open-sourced in November 2015.
 Classes| [Geoffrey Hinton](https://www.coursera.org/learn/neural-networks)
 Books| [Hands-On+Machine+Learning+with+Scikit-Learn+and+TensorFlow](https://www.safaribooksonline.com/library/view/Hands-On+Machine+Learning+with+Scikit-Learn+and+TensorFlow/9781491962282/preface01.html#idm140458046236752)
- |[Thoughtful Machine Learning with Pytho](https://www.safaribooksonline.com/library/view/thoughtful-machine-learning/9781491924129/)
+ |[Thoughtful Machine Learning with Python](https://www.safaribooksonline.com/library/view/thoughtful-machine-learning/9781491924129/)
+  | [Introduction to Machine Learning with Python] (https://www.safaribooksonline.com/library/view/introduction-to-machine/9781449369880/)
