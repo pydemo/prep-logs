@@ -20,3 +20,4 @@ Books| [Hands-On+Machine+Learning+with+Scikit-Learn+and+TensorFlow](https://www.
 “Python Machine Learning”, by S. Raschka.| Also a great introduction to Machine Learning, leveraging python open source libraries (Pylearn 2 and Theano).
 “Learning From Data”, by Y. Abu-Mostafa,M. Magdon-Ismail, and H. Lin.| A rather theoretical approach to ML, providing deep insights, in particular on the Bias/Variance tradeoff
 “Artificial Intelligence, a modern approach”, by S. Russel and P. Norvig.| This is a great (and huge) book covering an incredible amount of topics, including Machine Learning. It helps put ML into perspective.
+In batch learning| the system is incapable of learning incrementally: it must be trained using all the available data. This is called offline learning.
