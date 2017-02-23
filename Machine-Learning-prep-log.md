@@ -21,3 +21,4 @@ Books| [Hands-On+Machine+Learning+with+Scikit-Learn+and+TensorFlow](https://www.
 “Learning From Data”, by Y. Abu-Mostafa,M. Magdon-Ismail, and H. Lin.| A rather theoretical approach to ML, providing deep insights, in particular on the Bias/Variance tradeoff
 “Artificial Intelligence, a modern approach”, by S. Russel and P. Norvig.| This is a great (and huge) book covering an incredible amount of topics, including Machine Learning. It helps put ML into perspective.
 In batch learning| the system is incapable of learning incrementally: it must be trained using all the available data. This is called offline learning.
+corpus vs algos|The idea that data matters more than algorithms for complex problems was further popularized by Peter Norvig et al. in a paper titled “The unreasonable effectiveness of data”13 published in 2009.
