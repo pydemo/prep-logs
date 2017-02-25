@@ -5,6 +5,7 @@ Q | Info
 TensorFlow | Is library for distributed numerical computation using data flow graphs. It makes it possible to train and run very large neural networks efficiently by distributing the computations across potentially thousands of multi-GPU servers. TensorFlow was created at Google and it supports many of their large scale Machine Learning applications. It was open-sourced in November 2015.
 Resources|  [Kaggle.com]( Kaggle.com), [CreativeAI](http://www.creativeai.net/)
 Classes| [Geoffrey Hinton](https://www.coursera.org/learn/neural-networks)
+ |Google (https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009?utm_source=quora&utm_medium=ads&utm_campaign=quora-ads-machine-learning-7-desktop)
 Books| [Hands-On+Machine+Learning+with+Scikit-Learn+and+TensorFlow](https://www.safaribooksonline.com/library/view/Hands-On+Machine+Learning+with+Scikit-Learn+and+TensorFlow/9781491962282/preface01.html#idm140458046236752)
  |[Thoughtful Machine Learning with Python](https://www.safaribooksonline.com/library/view/thoughtful-machine-learning/9781491924129/)
   | [Introduction to Machine Learning with Python] (https://www.safaribooksonline.com/library/view/introduction-to-machine/9781449369880/)
@@ -22,3 +23,4 @@ Books| [Hands-On+Machine+Learning+with+Scikit-Learn+and+TensorFlow](https://www.
 “Artificial Intelligence, a modern approach”, by S. Russel and P. Norvig.| This is a great (and huge) book covering an incredible amount of topics, including Machine Learning. It helps put ML into perspective.
 In batch learning| the system is incapable of learning incrementally: it must be trained using all the available data. This is called offline learning.
 corpus vs algos|The idea that data matters more than algorithms for complex problems was further popularized by Peter Norvig et al. in a paper titled “The unreasonable effectiveness of data”13 published in 2009.
+NO FREE LUNCH THEOREM|
