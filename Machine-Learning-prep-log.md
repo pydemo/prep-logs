@@ -25,4 +25,4 @@ In batch learning| the system is incapable of learning incrementally: it must be
 corpus vs algos|The idea that data matters more than algorithms for complex problems was further popularized by Peter Norvig et al. in a paper titled “The unreasonable effectiveness of data”13 published in 2009.
 NO FREE LUNCH THEOREM|In a famous 1996 paper14, David Wolpert demonstrated that if you make absolutely no assumption about the data, then there is no reason to prefer a model over any other. This is called the No Free Lunch theorem (NFL).
  |In other words **There is no model that is a priori guaranteed to work better**  (hence the name of the theorem)
-A typical **supervised_ learning task**| is classification
+A typical **supervised** learning task| is classification. The spam filter is a good example of this: it is trained with many example emails along with their class (spam or ham), and it must learn how to classify new emails.
