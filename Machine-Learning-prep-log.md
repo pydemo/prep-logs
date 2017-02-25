@@ -26,3 +26,5 @@ corpus vs algos|The idea that data matters more than algorithms for complex prob
 NO FREE LUNCH THEOREM|In a famous 1996 paper14, David Wolpert demonstrated that if you make absolutely no assumption about the data, then there is no reason to prefer a model over any other. This is called the No Free Lunch theorem (NFL).
  |In other words **There is no model that is a priori guaranteed to work better**  (hence the name of the theorem)
 A typical **supervised** learning task| is classification. The spam filter is a good example of this: it is trained with many example emails along with their class (spam or ham), and it must learn how to classify new emails.
+ task is called **regression**|If it has to predict a _target_ numeric value such as the price of a car given a set of features (eg. mileage, age, brand, etc.) called _predictors_.
+ In Machine Learning an attribute| is a data type (eg. “Mileage”) while a _feature_ has several meanings depending on the context, but generally it means an **attribute plus its value** (eg. “Mileage = 15,000”). Many people use the words attribute and feature interchangeably, though.
