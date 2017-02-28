@@ -6,6 +6,7 @@ TensorFlow | Is library for distributed numerical computation using data flow gr
 Resources|  [Kaggle.com]( Kaggle.com), [CreativeAI](http://www.creativeai.net/)
 Classes| [Geoffrey Hinton](https://www.coursera.org/learn/neural-networks)
  |[Google] (https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009?utm_source=quora&utm_medium=ads&utm_campaign=quora-ads-machine-learning-7-desktop)
+ |[Corusera/machine-learning](https://www.coursera.org/specializations/machine-learning)
 Books| [Hands-On+Machine+Learning+with+Scikit-Learn+and+TensorFlow](https://www.safaribooksonline.com/library/view/Hands-On+Machine+Learning+with+Scikit-Learn+and+TensorFlow/9781491962282/preface01.html#idm140458046236752)
  |[Thoughtful Machine Learning with Python](https://www.safaribooksonline.com/library/view/thoughtful-machine-learning/9781491924129/)
   | [Introduction to Machine Learning with Python] (https://www.safaribooksonline.com/library/view/introduction-to-machine/9781449369880/)
