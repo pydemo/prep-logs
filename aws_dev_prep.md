@@ -6,3 +6,4 @@ AWS CloudFormation | A building block service that enables customers to provisio
 AWS Elastic Beanstalk | An application mamagement service
 EMR slave task node|only runs tasks that does not store data
 slave core nodes|You cannot remove them because they hold data
+Lambda function|Stores your code on Amazon S3
