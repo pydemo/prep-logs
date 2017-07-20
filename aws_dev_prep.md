@@ -10,3 +10,4 @@ Lambda function|Stores your code on Amazon S3
 Multi-AZ Db standby| Using __synch__ replication, not __Asynch__
 Security Groups| Assigned only to instances in __region__ (not globally).
 IAM Role Access Keys| Auto rotated by AWS, no need to change them
+ELB SSL Termination|Terminates security of connection over HTTP
