@@ -12,3 +12,4 @@ Security Groups| Assigned only to instances in __region__ (not globally).
 IAM Role Access Keys| Auto rotated by AWS, no need to change them
 ELB SSL Termination|Terminates security of connection over HTTP
 CloudFormation | Requires no polling instance. Make an S3 notification configuration which publishes to AWS Lambda on the manifest bucket. Make the Lambda create a CloudFormation Stack which contains the logic to construct an autoscaling worker tier of EC2 G2 instances with the ANN code on each instance. Create an SQS queue of the images in the manifest. Tear the stack down when the queue is empty.
+Deploy|AWS recommends Blue-Green for zero-downtime deploys.
