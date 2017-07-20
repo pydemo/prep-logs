@@ -15,3 +15,7 @@ CloudFormation | Requires no polling instance. Make an S3 notification configura
 Deploy|AWS recommends Blue-Green for zero-downtime deploys.
 Deploy Dynamo DB|Use CloudFront. Neither AWS OpsWorks nor AWS Elastic Beanstalk directly supports DynamoDB
 third parties|When third parties require access to your organization's AWS resources, you can use roles to delegate access to them.
+AWS API Gateway|by default throttles at 500 requests per second steady-state
+Lambda| by default, throttles at 100 concurrent requests for safety.
+Use 9001 MTU instead of 1500 for Jumbo Frames, to raise packet body to packet overhead ratios.
+UDP large file|	Use 9001 MTU instead of 1500 for Jumbo Frames, to raise packet body to packet overhead ratios. https://stackoverflow.com/questions/14010635/how-to-find-mtu-value-of-network-through-codein-python
