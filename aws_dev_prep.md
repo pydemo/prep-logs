@@ -21,3 +21,5 @@ Use 9001 MTU instead of 1500 for Jumbo Frames, to raise packet body to packet ov
 UDP large file|	Use 9001 MTU instead of 1500 for Jumbo Frames, to raise packet body to packet overhead ratios. https://stackoverflow.com/questions/14010635/how-to-find-mtu-value-of-network-through-codein-python
 CloudFormation stack status pooling|ListStacks / list-stacks
 OpsWorks|The stack is the core AWS OpsWorks Stacks component. 
+AWS Cognito |Build the application out using AWS Cognito and web identity federation to allow users to log in using Facebook or Google Accounts. Once they are logged in, the secret token passed to that user is used to directly access resources on AWS, like AWS S3. https://aws.amazon.com/blogs/security/how-does-amazon-cognito-relate-to-existing-web-identity-federation/
+identity provider| Login with Amazon, Facebook, Google, or any other OpenID Connect (OIDC)-compatible IdP, receive an authentication token, and then exchange that token for temporary security credentials in AWS that map to an IAM role with permissions to use the resources in your AWS account.
