@@ -20,3 +20,4 @@ Lambda| by default, throttles at 100 concurrent requests for safety.
 Use 9001 MTU instead of 1500 for Jumbo Frames, to raise packet body to packet overhead ratios.
 UDP large file|	Use 9001 MTU instead of 1500 for Jumbo Frames, to raise packet body to packet overhead ratios. https://stackoverflow.com/questions/14010635/how-to-find-mtu-value-of-network-through-codein-python
 CloudFormation stack status pooling|ListStacks / list-stacks
+OpsWorks|The stack is the core AWS OpsWorks Stacks component. 
