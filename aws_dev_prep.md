@@ -28,3 +28,5 @@ CloudFormation|Putting all resources in one stack is a bad idea, since different
 Layered Stack deployment|Only CloudFormation allows source controlled, declarative templates as the basis for stack automation. Nested Stacks help achieve clean separation of layers while simultaneously providing a method to control all layers at once when needed.
 way to track expenses|Cost Allocation Tagging is a built-in feature of AWS, and when coupled with the Cost Explorer, provides a simple and robust way to track expenses.
 Realtime access recon|CloudWatch Events allow subscription to AWS API calls, and direction of these events into Kinesis Streams. This allows a unified, near real-time stream for all API calls, which can be analyzed with any tool(s) of your choosing downstream.
+Caching queries|CloudFront cannot directly cache DynamoDB queries,  use Elasti Cache instead
+Resource unsupported by CloudFormation|Create a CloudFormation Custom Resource Type by implementing create, update, and delete functionality, either by subscribing a Custom Resource Provider to an SNS topic, or by implementing the logic in AWS Lambda.
