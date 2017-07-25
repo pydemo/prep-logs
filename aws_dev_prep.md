@@ -23,3 +23,5 @@ CloudFormation stack status pooling|ListStacks / list-stacks
 OpsWorks|The stack is the core AWS OpsWorks Stacks component. 
 AWS Cognito |Build the application out using AWS Cognito and web identity federation to allow users to log in using Facebook or Google Accounts. Once they are logged in, the secret token passed to that user is used to directly access resources on AWS, like AWS S3. https://aws.amazon.com/blogs/security/how-does-amazon-cognito-relate-to-existing-web-identity-federation/
 identity provider| Login with Amazon, Facebook, Google, or any other OpenID Connect (OIDC)-compatible IdP, receive an authentication token, and then exchange that token for temporary security credentials in AWS that map to an IAM role with permissions to use the resources in your AWS account.
+Large ETL JOb|o declaratively model build and destroy of a cluster, you need to use AWS CloudFormation. 
+CloudFormation|Putting all resources in one stack is a bad idea, since different tiers have different life cycles and frequencies of change. you can use two common frameworks: a multi-layered architecture and service-oriented architecture (SOA).
