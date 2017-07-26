@@ -34,3 +34,6 @@ Elasti Beanstalk|Applications group logical services. Environments belong to App
 Elastic Beanstalk model|Applications have many environments, environments have many deployments.
 Perpetual HTTP health check|You can create a health check that will run into perpetuity using Route53, in one API call, which will ping your service via HTTP every 10 or 30 seconds.
 Which status represents a failure state in AWS CloudFormation?|ROLLBACK_IN_PROGRESS
+How does Amazon RDS multi Availablity Zone model work?|A second, standby database is deployed and maintained in a different availablity zone from master, using synchronous replication.
+What option below is the geographic limit of an EC2 security group?|regions
+What is a circular dependency in AWS CloudFormation?
