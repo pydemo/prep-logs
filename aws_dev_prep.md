@@ -32,3 +32,4 @@ Caching queries|CloudFront cannot directly cache DynamoDB queries,  use Elasti C
 Resource unsupported by CloudFormation|Create a CloudFormation Custom Resource Type by implementing create, update, and delete functionality, either by subscribing a Custom Resource Provider to an SNS topic, or by implementing the logic in AWS Lambda.
 Elasti Beanstalk|Applications group logical services. Environments belong to Applications, and typically represent different deployment levels (dev, stage, prod, fo forth). Deployments belong to environments, and are pushes of bundles of code for the environments to run.
 Elastic Beanstalk model|Applications have many environments, environments have many deployments.
+Perpetual HTTP health check|You can create a health check that will run into perpetuity using Route53, in one API call, which will ping your service via HTTP every 10 or 30 seconds.
