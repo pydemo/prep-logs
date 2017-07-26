@@ -30,3 +30,4 @@ way to track expenses|Cost Allocation Tagging is a built-in feature of AWS, and 
 Realtime access recon|CloudWatch Events allow subscription to AWS API calls, and direction of these events into Kinesis Streams. This allows a unified, near real-time stream for all API calls, which can be analyzed with any tool(s) of your choosing downstream.
 Caching queries|CloudFront cannot directly cache DynamoDB queries,  use Elasti Cache instead
 Resource unsupported by CloudFormation|Create a CloudFormation Custom Resource Type by implementing create, update, and delete functionality, either by subscribing a Custom Resource Provider to an SNS topic, or by implementing the logic in AWS Lambda.
+Elasti Beanstalk|Applications group logical services. Environments belong to Applications, and typically represent different deployment levels (dev, stage, prod, fo forth). Deployments belong to environments, and are pushes of bundles of code for the environments to run.
