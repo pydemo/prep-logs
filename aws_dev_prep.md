@@ -33,3 +33,4 @@ Resource unsupported by CloudFormation|Create a CloudFormation Custom Resource T
 Elasti Beanstalk|Applications group logical services. Environments belong to Applications, and typically represent different deployment levels (dev, stage, prod, fo forth). Deployments belong to environments, and are pushes of bundles of code for the environments to run.
 Elastic Beanstalk model|Applications have many environments, environments have many deployments.
 Perpetual HTTP health check|You can create a health check that will run into perpetuity using Route53, in one API call, which will ping your service via HTTP every 10 or 30 seconds.
+Which status represents a failure state in AWS CloudFormation?|ROLLBACK_IN_PROGRESS
