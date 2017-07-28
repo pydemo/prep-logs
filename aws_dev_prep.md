@@ -37,3 +37,6 @@ Which status represents a failure state in AWS CloudFormation?|ROLLBACK_IN_PROGR
 How does Amazon RDS multi Availablity Zone model work?|A second, standby database is deployed and maintained in a different availablity zone from master, using synchronous replication.
 What option below is the geographic limit of an EC2 security group?|regions
 What is a circular dependency in AWS CloudFormation?
+Routing tables|Work at subnet level
+NACLs| Work at protocol level. stateless
+Security groups| Work at instance level
