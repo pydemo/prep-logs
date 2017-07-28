@@ -38,5 +38,5 @@ How does Amazon RDS multi Availablity Zone model work?|A second, standby databas
 What option below is the geographic limit of an EC2 security group?|regions
 What is a circular dependency in AWS CloudFormation?
 Routing tables|Work at subnet level
-NACLs| Work at protocol level. stateless
-Security groups| Work at instance level
+NACLs| Work at protocol level. stateless -responce traffic must be specified. DENY rules
+Security groups| Work at instance level. Provide security at protocol,port level. no DENY rules. Stateful
