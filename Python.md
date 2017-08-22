@@ -15,7 +15,7 @@ if __name__== '__main__':
 
 
 ## Doctest
-```
+```Python
 def func():
 '''
 >>>x1=x+x2
@@ -23,7 +23,10 @@ def func():
 1.25
 '''
 ```
-```
+
+Test:
+
+```Python
 import doctest
 print(doctest.testmod())
 ```
