@@ -23,6 +23,7 @@ def func():
 1.25
 '''
 ```
-
+```
 import doctest
 print(doctest.testmod())
+```
