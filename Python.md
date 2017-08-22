@@ -12,3 +12,13 @@ if __name__== '__main__':
   run(host='localhost', port=8080)
   
 ```
+def func():
+'''
+>>>x1=x+x2
+>>>x1
+1.25
+'''
+## Doctest
+
+import doctest
+print(doctest.testmod())
