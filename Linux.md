@@ -1,0 +1,1 @@
+lsmod| list device drivers
