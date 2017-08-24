@@ -15,4 +15,4 @@ strace -c  ls|timings for system calls
 strace ls 2>&1|grep open| grep standard error
 man 7 signal| signal review
 check copy progress| dd if=/dev/zero of=/dev/null &
- kill -s USR1 $(pidof dd)
+ | kill -s USR1 $(pidof dd)
