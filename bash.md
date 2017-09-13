@@ -13,3 +13,4 @@ pattern ${VAR##\*/}| delete longest part that matches from the beginnning
 pattern ${VAR%/\*}|delete shortest part that matches from the end
 pattern ${VAR%%\/\*}| delete longest part that matches from the end
 External calculation| let x="$1 $2 $3"
+bash internal calculator| echo $(( 10\*30 ))
