@@ -14,3 +14,7 @@ pattern ${VAR%/\*}|delete shortest part that matches from the end
 pattern ${VAR%%\/\*}| delete longest part that matches from the end
 External calculation| let x="$1 $2 $3"
 bash internal calculator| echo $(( 10\*30 ))
+sorting by field name|sort  -k1 -t : /etc/passwd
+sorting field 1|cut -f 1 -d:/etc/passwd
+show  line \#5| sed -n 5p /etc/passwd
+substitute in file|sed -i s/hello/bye/g file.txt
