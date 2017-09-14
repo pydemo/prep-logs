@@ -24,3 +24,4 @@ $NF| last field of awk
 awk filter |'$3>500'
 awk filter| awk -F : '$NF ~/bash/' /etc/passwd
 uppercase string| tr [a-z][A-Z] or tr [:lower:] [:upper:]
+for loop|for i in \`cat users\`; do echo $i; done
