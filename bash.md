@@ -37,4 +37,5 @@ do
 done
 
 echo $1 has just logged in
+mail -s "$1 has just logged in" root < .
 ```
