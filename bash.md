@@ -28,7 +28,8 @@ for loop|for i in \`cat users\`; do echo $i; done
 for loop int |for i in {200..210}; do ping -c 1 192.168.234.$1 2>/dev/null; done or for i in {200..210}; do ping -c 1 192.168.234.$1 2>/dev/null; done
 Incrementing| COUNTER=$((COUNTER+1))
 file count| for i in \*
-until user logged in |```bash
+until user logged in |
+```bash
 until users|grep $1 > /dev/null
 do
   echo $1 is not logged in yet
