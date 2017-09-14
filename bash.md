@@ -20,3 +20,7 @@ show  line \#5| sed -n 5p /etc/passwd
 substitute in file|sed -i s/hello/bye/g file.txt
 delete line \#5|sed -i -e '5d' file.txt
 show column for pattern|awf -F : '/alex/ {print $4}] /etc/passwd
+$NF| last field of awk
+awk filter |'$3>500'
+awk filter| awk -F : '$NF ~/bash/' /etc/passwd
+uppercase string| tr [a-z][A-Z] or tr [:lower:] [:upper:]
