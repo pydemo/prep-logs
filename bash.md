@@ -39,3 +39,18 @@ done
 echo $1 has just logged in
 mail -s "$1 has just logged in" root < .
 ```
+if replacement| [ -z $1 ] && echo no argument provided && exit 2
+[ -f $1 ] && echo $1 is a file && exit 0
+[ -d $1 ] && echo $1 ia s directory && exit 0
+#if-then-else
+[ -f $1 ] && echo $1 is a file || echo $1 is not a file, nor a directory
+#will tax CPU to 100 %
+
+Array| names=(linda lisa laura lori)
+echo ${names[@]}
+echo ${names[2]}
+
+while true; do true; done;
+
+
+
