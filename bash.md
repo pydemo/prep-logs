@@ -51,6 +51,14 @@ echo ${names[@]}
 echo ${names[2]}
 
 while true; do true; done;
+vim use: **:set list** to show hidden characters
+use **bash -v** to show verbose output
+use **bash -n** to check for syntax errors
+Use **bash -x** to show xtrace information
+
+Use **trap DEBUG** trap to show debugging information
+close trap using **trap -- DEBUG**
+
 
 
 
