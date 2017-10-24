@@ -59,6 +59,16 @@ Use **bash -x** to show xtrace information
 Use **trap DEBUG** trap to show debugging information
 close trap using **trap -- DEBUG**
 
+[ $RETVAL = 0 ] && touch $locfile && /sbin/pidof $exec > $pidfile
+RETVAL=$?
+[ $RETVAL = 0 ] && rm -f $lockfile $pidfile
+[ -x $exec ] || exit 5
+
+**${arr[\*]}** refers to all values in array
+**${!arr[\*]}** shows all index values currently in use
+**${#arr[\*]}** shows how many items there are in array.
+
+
 
 
 
