@@ -63,7 +63,8 @@ close trap using **trap -- DEBUG**
 RETVAL=$?
 [ $RETVAL = 0 ] && rm -f $lockfile $pidfile
 [ -x $exec ] || exit 5
-
+Q | Info 
+--- | ---
 **${arr[\*]}** |refers to all values in array
 **${!arr[\*]}** |shows all index values currently in use
 **${#arr[\*]}** |shows how many items there are in array.
