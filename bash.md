@@ -64,9 +64,9 @@ RETVAL=$?
 [ $RETVAL = 0 ] && rm -f $lockfile $pidfile
 [ -x $exec ] || exit 5
 
-**${arr[\*]}** refers to all values in array
-**${!arr[\*]}** shows all index values currently in use
-**${#arr[\*]}** shows how many items there are in array.
+**${arr[\*]}** |refers to all values in array
+**${!arr[\*]}** |shows all index values currently in use
+**${#arr[\*]}** |shows how many items there are in array.
 
 
 
