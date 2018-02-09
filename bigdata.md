@@ -22,3 +22,6 @@ Hadoop |consists of two major components at heart: the file system (HDFS) and th
 YARN | stands for Yet Another Resource Negotiator, replacing the monolithic MapReduce framework in Hadoop 2.2. MapReduce is still present in Hadoop, but was split into two parts: a resource management framework named YARN, and a MapReduce application running on top of YARN.
 presplitting| a new table is the answer to avoid hotspotting on a single region for staging the bulk load
 Which factors determine if a Big Data solution is appropriate?| Variety, Velocity, Volume (http://whatis.techtarget.com/definition/3Vs)
+Key Store|is good for data velocity
+wide column stores|key /value are part of the column family
+MapReduce inputs|key-value pairs and outputs key-value pairs
