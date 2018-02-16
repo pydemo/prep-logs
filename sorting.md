@@ -12,7 +12,7 @@ def xor(l):
     return r
 ```
 It gains the name "exclusive or" because the meaning of "or" is ambiguous when both operands are true;
-
+```
 >>> 0 ^ 0
 0
 >>> 0 ^ 1
@@ -21,4 +21,4 @@ It gains the name "exclusive or" because the meaning of "or" is ambiguous when b
 1
 >>> 1 ^ 1
 0
-
+```
