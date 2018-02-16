@@ -11,3 +11,14 @@ def xor(l):
     for v in l: r ^= v
     return r
 ```
+It gains the name "exclusive or" because the meaning of "or" is ambiguous when both operands are true;
+
+>>> 0 ^ 0
+0
+>>> 0 ^ 1
+1
+>>> 1 ^ 0
+1
+>>> 1 ^ 1
+0
+
